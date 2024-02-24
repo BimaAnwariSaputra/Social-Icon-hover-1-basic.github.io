@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    display: grid;
+    place-items: center;
+    background: #151515;
+    height: 100vh;
+}
+
+*:focus,
+*:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.text-navbar {
+    background: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+}
+h2 {
+    font-family: 'comic sans ms';
+    color: black;
+    font-weight: 600;
+}
+
+.menu{
+    display: inline-flex;
+    list-style: none;
+    padding: 0px;
+}
+
+.menu .icon{
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    padding: 17px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.menu .text{
+    position: absolute;
+    top: 0;
+    font-size: 0.8rem;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.menu .text::before{
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.menu .icon:hover .text{
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.menu .icon:hover span,
+.menu .icon:hover .text{
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.menu .facebook:hover,
+.menu .facebook:hover .text,
+.menu .facebook:hover .text::before{
+    background: hsl(221, 44%, 41%);
+    font-family: 'comic sans ms';
+    cursor: pointer;
+    color: #fff;
+}
+
+.menu .twitter:hover,
+.menu .twitter:hover .text,
+.menu .twitter:hover .text::before {
+    background: cornflowerblue;
+    font-family: 'comic sans ms';
+    cursor: pointer;
+    color: #fff;
+}
+
+.menu .instagram:hover,
+.menu .instagram:hover .text,
+.menu .instagram:hover .text::before {
+    background:deeppink;
+    font-family: 'comic sans ms';
+    cursor: pointer;
+    color: #fff;
+}
+
+.menu .youtube:hover,
+.menu .youtube:hover .text,
+.menu .youtube:hover .text::before {
+    background: crimson;
+    font-family: 'comic sans ms';
+    cursor: pointer;
+    color: #fff;
+}
